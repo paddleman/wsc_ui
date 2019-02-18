@@ -1,0 +1,41 @@
+
+.main-container {
+  display: grid;
+  grid-template-areas:  "h h h h h h"
+                        "p p p p s s"
+                        "m m m m s s"
+                        "f f f f f f";
+ 
+  grid-template-rows: auto minmax(0, 15vh) minmax(0, 60vh) 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;  
+}
+
+.header-nav {
+  grid-area: h;
+  min-height: 70px;
+
+  background-image: linear-gradient(180deg, #0793e4 0%, #07049e 100%);
+}
+
+.page-title {
+  grid-area: p;
+  background-color: lightgray;
+}
+
+.main-content {
+  grid-area: m;
+  background-color: lightgray;
+
+}
+
+.side-info {
+  grid-area: s;
+  background-color: lightgray;
+  overflow: scroll;
+}
+
+.footer {
+  background-color: lightgray;
+  grid-area: f;
+}

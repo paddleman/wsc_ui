@@ -1,0 +1,12 @@
+{{#each model as |stn|}}
+  {{#link-to "stations.station" stn.id class="no-underline"}}
+    <div class="mb-2 max-w-full border-indigo-dark border-solid border-2 rounded bg-white hover:bg-indigo-lighter">
+      <div class=" px-2 py-1 text-sm font-medium">
+        {{stn.stationNumber}} - {{stn.stationName}}  {{stn.id}}
+      </div>
+      <div class="px-2 mb-1 text-xs font-base ">
+        Latitude: {{stn.latitude}}  Longitude: {{stn.longitude}}   
+      </div>
+    </div>
+  {{/link-to}}
+{{/each}}
